@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#Version 0.1
+#Version 0.2
 
 index.html
 android-chrome-192x192.png
@@ -10,6 +10,8 @@ favicon-16x16.png
 favicon-32x32.png
 safari-pinned-tab.svg
 site.webmanifest
+/assets/Press-and-Drag.png
+/assets/Zoom.png
 /assets/25-asset.glb
 /assets/25-marker.patt
 /assets/bday-asset.glb

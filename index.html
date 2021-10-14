@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt" manifest="manifest.mf">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6665ff">
+		<meta name="msapplication-TileColor" content="#6665ff">
+		<meta name="theme-color" content="#6665ff">
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+            gesture-detector
+        >
+            <a-assets>
+                <a-asset-item
+                    id="bday-animated-asset"
+                    src="assets/bday-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="25-animated-asset"
+                    src="assets/25-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="hallow-animated-asset"
+                    src="assets/hallow-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="carn-animated-asset"
+                    src="assets/carn-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="chi-animated-asset"
+                    src="assets/chi-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="chris-animated-asset"
+                    src="assets/chris-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="east-animated-asset"
+                    src="assets/east-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="new-animated-asset"
+                    src="assets/new-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="father-animated-asset"
+                    src="assets/father-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="grad-animated-asset"
+                    src="assets/grad-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="mother-animated-asset"
+                    src="assets/mother-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="pao-animated-asset"
+                    src="assets/pao-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="peace-animated-asset"
+                    src="assets/peace-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="port-animated-asset"
+                    src="assets/port-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="reis-animated-asset"
+                    src="assets/reis-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="santos-animated-asset"
+                    src="assets/santos-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="valen-animated-asset"
+                    src="assets/valen-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="wom-animated-asset"
+                    src="assets/wom-asset.glb"
+                ></a-asset-item>
+				<a-asset-item
+                    id="work-animated-asset"
+                    src="assets/work-asset.glb"
+                ></a-asset-item>
+            </a-assets>
+            </a-assets>
+
+            <a-marker
+                id="bday-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/bday-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="bday-bowser-model"
+                    scale="0.9286699417584899 0.9286699417584899 0.9286699417584899"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#bday-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="25-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/25-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="25-bowser-model"
+                    scale="0.2806347341939865 0.2806347341939865 0.2806347341939865"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#25-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="hallow-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/hallow-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="hallow-bowser-model"
+                    scale="0.6057011751749005 0.6057011751749005 0.6057011751749005"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#hallow-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="carn-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/carn-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="carn-bowser-model"
+                    scale="0.8326570136924136 0.8326570136924136 0.8326570136924136"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#carn-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="chi-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/chi-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="chi-bowser-model"
+                    scale="0.17521876560190966 0.17521876560190966 0.17521876560190966"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#chi-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="chris-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/chris-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="chris-bowser-model"
+                    scale="0.3892774819495339 0.3892774819495339 0.3892774819495339"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#chris-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="east-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/east-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="east-bowser-model"
+                    scale="0.06389297775075953 0.06389297775075953 0.06389297775075953"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#east-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="new-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/new-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="new-bowser-model"
+                    scale="0.10734905766347161 0.10734905766347161 0.10734905766347161"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#new-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="father-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/father-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="father-bowser-model"
+                    scale="0.35165919124439676 0.35165919124439676 0.35165919124439676"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#father-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="grad-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/grad-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="grad-bowser-model"
+                    scale="0.1489212623074174 0.1489212623074174 0.1489212623074174"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#grad-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="mother-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/mother-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="mother-bowser-model"
+                    scale="0.11404111583180088 0.11404111583180088 0.11404111583180088"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#mother-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="pao-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/pao-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="pao-bowser-model"
+                    scale="0.06444354059060145 0.06444354059060145 0.06444354059060145"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#pao-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="peace-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/peace-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="peace-bowser-model"
+                    scale="0.48786087022724794 0.48786087022724794 0.48786087022724794"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#peace-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="port-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/port-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="port-bowser-model"
+                    scale="0.042631849281180016 0.042631849281180016 0.042631849281180016"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#port-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="novo-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/novo-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="new-bowser-model"
+                    scale="0.10734905766347161 0.10734905766347161 0.10734905766347161"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#new-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="reis-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/reis-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="reis-bowser-model"
+                    scale="0.02756327147490937 0.02756327147490937 0.02756327147490937"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#reis-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="santos-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/santos-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="santos-bowser-model"
+                    scale="0.1513949377463995 0.1513949377463995 0.1513949377463995"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#santos-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="valen-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/valen-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="valen-bowser-model"
+                    scale="0.21650576687905734 0.21650576687905734 0.21650576687905734"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#valen-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="wom-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/wom-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="wom-bowser-model"
+                    scale="0.058296650435746604 0.058296650435746604 0.058296650435746604"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#wom-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			<a-marker
+                id="work-animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/work-marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="work-bowser-model"
+                    scale="0.012227266059892376 0.012227266059892376 0.012227266059892376"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#work-animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+		<div style="position: fixed; bottom: 10px; right: 10px; width:100%; text-align: right; z-index: 1;">
+			<a href="https://teducativas.madeira.gov.pt/gmte/" target="_blank"><img src="assets/logo_gmte.png" /></a>
+		</div>
+</div>
+    </body>
+</html>
